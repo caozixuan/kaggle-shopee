@@ -1,5 +1,5 @@
 # kaggle-shopee
-This is the code for kaggle competition.
+This is the training code for kaggle competition.
 This code is for DLNN course project.
 
 # simple description
