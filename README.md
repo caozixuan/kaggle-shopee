@@ -98,3 +98,12 @@ loss： arc margin + cross entropy loss
 按照数据的分组方式对数据进行打标签处理。
 
 对每个（image，title），输入到efficient net和transformer提取特征表示并拼接起来，对拼接之后的特征表示旋转一定的角度之后（即加入arc margin）计算交叉熵损失，更新模型。
+
+# 提交结果
+
+unsupervised_baseline.ipynb: 最简单的不需要训练的baseline，下载预训练的resnet分类模型+tf-idf文本，最终测试集准确率0.709
+method.ipynb: image最终使用了一个tensorflow训练结果:EfficientNetB3_512_42.h5 和两个pytorch模型，模型名称为tf_efficientnet_b5_ns和arcface_512x512_tf_efficientnet_b4_LR
+CFG class下还有其他的模型使用，限于提交的运行时间限制，只能加载有限的模型，结果差不多，最终测试集准确率可以达到0.722.
+
+使用的依赖和预训练模型在 https://pan.baidu.com/s/1DKvTF4OXMe26YD1LEMAsQw 密码 9c45
+将文件解压后，里面全部文件和文件夹复制到当前文件夹下
